@@ -2,6 +2,8 @@ package com.cqupt.string;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class S1 {
 
     @Test
@@ -32,5 +34,21 @@ public class S1 {
         System.out.println("s1 and \"Hello World\": " + (s1.compareTo("Hello World") == 0));
         System.out.println("s1 and s2: " + (s1.compareTo(s2) == 0));
         System.out.println("s1 and s3: " + (s1.compareTo(s3) == 0));
+    }
+
+    /*
+        java 字符串不可变。若是其可变，可以使用 toCharArray 将其转换为字符数组。
+     */
+    @Test
+    public void s1() {
+        String s1 = "Hello World";
+//        s1[5] = ',';
+        System.out.println(s1);
+        char[] charArray = s1.toCharArray();
+        charArray[5] = ',';
+        String s = String.valueOf(charArray);
+        System.out.println(s);
+        String s2 = new String(charArray);
+        System.out.println(s2);
     }
 }
