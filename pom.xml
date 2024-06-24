@@ -8,9 +8,6 @@
     <artifactId>ds</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
-    <modules>
-        <module>array_string</module>
-    </modules>
 
     <properties>
         <revision>1.0-SNAPSHOT</revision>
@@ -20,15 +17,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
